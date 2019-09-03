@@ -11,8 +11,8 @@ $sql2="SELECT count(`Appl_Status`) as ApprovedCount from mqr_f2a2_status where A
 $sql3="SELECT count(`Installation_Status`) as InstalledCount from mqr_f2a2_status where `Installation_Status`='Installation Completed';";
 $sql4="SELECT count(`Installation_Status`) as PendingInstallationCount from mqr_f2a2_status where `Installation_Status`='Pending for installation';";
 $sql5="SELECT DATE_FORMAT(`Created_On`,'%W %D %M %Y') as CreatedOn FROM mqr_f2a2 ORDER BY `Created_On` DESC LIMIT 1";
-$sql6="SELECT count(`Appl_No`) as TotalPendingERP FROM `pending_appl` WHERE Appl_Status LIKE 'Pending%'";
-$sql7="select count(`Appl_No`) as TotalPenSalesman from mqr_pendingforsalesman";
+$sql6="SELECT count(`Appl_No`) as TotalPendingERP FROM `view_totpendingappl` WHERE Appl_Status LIKE 'Pending%'";
+$sql7="select count(`Appl_No`) as TotalPenSalesman from mqr_discrepancy";
 $sql8="select count(`Appl_No`) as TotalPendingERPBank from mqr_f2a2_status where `Appl_Status` LIKE '%Bank Details' or `Appl_Status` LIKE '%Correct Bank Details'";
 $sql9="select count(`Appl_No`) as TotalPendingERPMkr from mqr_f2a2_status where `Appl_Status` like '%Screening' or `Appl_Status` LIKE '%Risk' or `Appl_Status` LIKE '%Maker' or `Appl_Status` LIKE '%Checker';";
 ?>
